@@ -51,6 +51,10 @@ def normal_closure_embedding(base: Word, word: Word):
     return result
 
 
+def is_from_normal_closure(base: Word, word: Word):
+    return len(normal_closure_embedding(base, word)) == 0
+
+
 def normalize(word: Word):
     return normal_closure_embedding(base = [], word = word)
 
