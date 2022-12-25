@@ -1,2 +1,2 @@
-from .word_generator import (FreeGroupGenerator, NormalClosureGenerator)
+from .word_generator import (constant, uniform, uniform_hyperbolic, FreeGroupGenerator, NormalClosureGenerator)
 from .utils import *
