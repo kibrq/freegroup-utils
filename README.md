@@ -83,7 +83,7 @@ g = smp.shuffle(g)
 g = smp.reduce(core.commutator, g)
 # `g` produces words from symmetric commutator of <x>, <y>, <z>, <xyz>
 
-g = smp.join(repeat(g, 5))
+g = smp.join(*repeat(g, 5))
 g = smp.subset(g)
 g = smp.reduce(core.multiply, g)
 # `g` produces multiplications of several words from symmetric commutator
@@ -102,7 +102,7 @@ g = smp.shuffle(g)
 g = smp.reduce(core.commutator, g)
 # `g` produces words from symmetric commutator of <x>, <y>, <z>, <xyz>
 
-g = smp.join(repeat(g, 5))
+g = smp.join(*repeat(g, 5))
 g = smp.subset(g)
 g = smp.append(repeat([1, 2, -1]), g)
 g = smp.shuffle(g)
