@@ -65,7 +65,7 @@ g = smp.shuffle(g)
 g = smp.reduce(core.commutator, g)
 # `g` produces words from symmetric commutator of <x>, <y>, <z>, <xyz>
 
-g = map(core.normalize(g))
+g = map(core.normalize, g)
 g = filter(lambda x: 0 < len(x), g)
 # `g` produces nonzero words
 ```
