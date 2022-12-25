@@ -86,7 +86,7 @@ g = smp.reduce(core.commutator, g)
 g = smp.join(repeat(g, 5))
 g = smp.subset(g)
 g = smp.reduce(core.multiply, g)
-# `g` produces words multiplications of several words from symmetric commutator
+# `g` produces multiplications of several words from symmetric commutator
 ```
 
 ```python3
