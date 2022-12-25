@@ -1,2 +1,2 @@
-from .sampling import *
-from .utils import unique
+from .word_generator import (FreeGroupGenerator, NormalClosureGenerator)
+from .utils import *

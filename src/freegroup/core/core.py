@@ -1,6 +1,5 @@
 from typing import List, Iterable
-from functools import reduce
-
+from .utils import is_sublist
 
 Word = List[int]
 
@@ -16,18 +15,7 @@ def conjugation(word: Word, conjugator: Word) -> Word:
 def commutator(x: Word, y: Word) -> Word:
     return reciprocal(x) + reciprocal(y) + x + y
 
-
-def iterable_commutator(words: List[Word]): 
-    return reduce(commutator, words)
-
-
-def __check_is_sublist__(t: List, s: List):
-    if len(s) == 0:
-        return False
-    for i in range(len(s) - len(t)):
-        if all(map(lambda v: v[0] == v[1], zip(t, s[i:i+len(t)]))):
-            return True
-    return False
+def multiply(x: Word, y: Word) -> Word: return x + y
 
 
 def iterable_normal_closure_embedding(base: Word, word: Word):
@@ -38,8 +26,8 @@ def iterable_normal_closure_embedding(base: Word, word: Word):
         if len(reduced) >= 2 and reduced[-2] == -reduced[-1]:
             del reduced[-2:]
         if len(reduced) >= len(base) and \
-            (__check_is_sublist__(reduced[-len(base):], d_base) or \
-                __check_is_sublist__(reduced[-len(base):], di_base)):
+            (is_sublist(reduced[-len(base):], d_base) or \
+                is_sublist(reduced[-len(base):], di_base)):
             del reduced[-len(base):]
         yield reduced
 
