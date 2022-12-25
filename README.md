@@ -75,7 +75,7 @@ from freegroup import sampling as smp, core
 from itertools import repeat
 
 gs = [smp.NormalClosureGenerator([i], 3, smp.constant(10)) for i in range(1, 3 + 1)]
-gs += [smp.NormalClosureGenerator([1, 2, 3], 3, 5)]
+gs += [smp.NormalClosureGenerator([1, 2, 3], 3, smp.constant(5))]
 g = smp.join(*gs)
 # `g` produces list of words `w`, where w[0] from <x>, w[1] from <y>, ..., w[-1] from <xyz>
 
@@ -94,7 +94,7 @@ from freegroup import sampling as smp, core
 from itertools import repeat
 
 gs = [smp.NormalClosureGenerator([i], 3, smp.constant(10)) for i in range(1, 3 + 1)]
-gs += [smp.NormalClosureGenerator([1, 2, 3], 3, 5)]
+gs += [smp.NormalClosureGenerator([1, 2, 3], 3, smp.constant(5))]
 g = smp.join(*gs)
 # `g` produces list of words `w`, where w[0] from <x>, w[1] from <y>, ..., w[-1] from <xyz>
 
