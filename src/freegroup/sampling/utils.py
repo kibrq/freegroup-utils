@@ -1,7 +1,7 @@
 from numpy.random import choice, shuffle, random
 from typing import List, Tuple
 
-from .core import Word, reciprocal
+from ..core import Word, reciprocal
 
 
 def random_bracket_sequence(n):
@@ -68,3 +68,11 @@ def create_identites_from_normal_closure(n_generators: int, base: Word):
         identities.append((base[:t], base[t:]))
         identities.append((i_base[:t], i_base[t:]))
     return identities
+
+
+def unique(iterable):
+    seen = set()
+    for el in iterable:
+        if not tuple(el) in seen:
+            seen.add(tuple(el))
+            yield el
