@@ -27,7 +27,7 @@ import numpy as np
 
 word = [1, 2, 3]
 
-d.magnus_coefficients(core.to_numpy([word]), n_generators = 3, modulo = 8) # all methods accepts 2d-shape arrays as inputs
+d.magnus_coefficients(core.to_numpy([word]), 3, 8) # all methods accepts 2d-shape arrays as inputs
 >>> ...
 ```
 
