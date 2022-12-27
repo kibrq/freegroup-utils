@@ -33,7 +33,7 @@ def iterable_normal_closure_embedding(base: Word, word: Word):
 
 
 def normal_closure_embedding(base: Word, word: Word):
-    result = None
+    result = []
     for f in iterable_normal_closure_embedding(base, word):
         result = f
     return result
