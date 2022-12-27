@@ -4,11 +4,10 @@ Utilities to work with free groups
 ## Installation
 
 Note: you need `pip` for this. Run the following commands:
-- 
-    ```
-    git clone https://github.com/kibrq/freegroup-utils.git
-    python3 -m pip install setuptools pybind11 ./freegroup-utils
-    ```
+```
+git clone https://github.com/kibrq/freegroup-utils.git
+python3 -m pip install setuptools pybind11 ./freegroup-utils
+```
 
 ## Usage
 
